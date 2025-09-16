@@ -1,5 +1,17 @@
 {
   "extends": "@react-native/typescript-config",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["**/node_modules", "**/Pods"]
+  "compilerOptions": {
+    "allowJs": true, // Allow TypeScript to process JS files
+    "checkJs": false // Optional: set to true if you want TS to type-check JS
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "nativewind-env.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/Pods"
+  ]
 }
