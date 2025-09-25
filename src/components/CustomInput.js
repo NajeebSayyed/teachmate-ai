@@ -1,16 +1,30 @@
-import { TextInput } from 'react-native';
+import { TextInput, View } from 'react-native';
 import React from 'react';
+import CustomText from './CustomText';
 
-const CustomInput = ({ title, className, value, onChangeText }) => {
+const CustomInput = ({
+  label,
+  placeholder,
+  value,
+  onChangeText,
+  className,
+  ...props
+}) => {
   return (
-    <TextInput
-      placeholder={title}
-      onChangeText={onChangeText}
-      value={value}
-      placeholderTextColor="#32343E"
-      // secureTextEntry={secureTextEntry}
-      className={`h-20 w-[90%] text-lg text-black bg-blue-50 rounded-2xl mt-2 self-center px-6 ${className}`}
-    />
+    <View>
+      {label && (
+        <CustomText className="text-base text-black mb-2">{label}</CustomText>
+      )}
+
+      <TextInput
+        placeholder={placeholder}
+        placeholderTextColor="#32343E"
+        value={value}
+        onChangeText={onChangeText}
+        className={`h-20 w-[90%] text-lg text-black bg-blue-50 rounded-2xl mt-2 self-center px-6 ${className}`}
+        {...props}
+      />
+    </View>
   );
 };
 
