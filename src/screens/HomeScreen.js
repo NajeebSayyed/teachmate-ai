@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
         title="Lets Start !"
         className="absolute bottom-60 self-center"
         textStyle={{ fontFamily: 'Nunito-Bold', fontSize: 35 }}
-        // onPress={() => navigation.navigate('GenerateScreen')}
+        onPress={() => navigation.navigate('GenerateScreen')}
       />
     </View>
   );
