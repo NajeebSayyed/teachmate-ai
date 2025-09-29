@@ -28,7 +28,7 @@ const CustomSelectRow = ({
   };
 
   return (
-    <View className="w-full items-start mt-4">
+    <View className="w-full items-start mt-4 ml-8">
       {label && <Text className="text-lg font-bold mb-2">{label}</Text>}
 
       <View className="flex-row flex-wrap w-[90%]">

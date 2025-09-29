@@ -8,10 +8,11 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { useSelector } from 'react-redux';
+import { GEMINI_API_KEY } from '@env';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import Markdown from 'react-native-markdown-display';
 
-const genAI = new GoogleGenerativeAI('AIzaSyC3xtB5XPlTxTVmL3npMs8XL8SR1zn2VCo');
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 const OutputScreen = () => {
   const { topic, level, difficulty, questionType } = useSelector(
@@ -28,7 +29,7 @@ const OutputScreen = () => {
         const model = genAI.getGenerativeModel({
           model: 'gemini-2.5-flash',
         });
-        const prompt = `Generate a 20 questions test paper on ${topic} for ${level} level students with ${difficulty}, containing ${questionType} Question Types also provide answer key after test. (remember: dont give instructions above the paper only give topic name)`;
+        const prompt = `Generate a 20 questions test paper on ${topic} for ${level} level students with ${difficulty}, containing ${questionType} Question Types also provide answer key after test. (remember: dont give instructions above the paper, only give topic name)`;
         const result = await model.generateContent(prompt);
         setQuiz(result.response.text());
       } catch (error) {
@@ -42,7 +43,7 @@ const OutputScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Generated Quiz ✨</Text>
+      <Text style={styles.title}>Generated Quiz ⚡️</Text>
       {loading ? (
         <View style={styles.loadingContainer}>
           <ActivityIndicator size="large" color="#007AFF" />

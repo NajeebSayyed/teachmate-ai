@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import React, { useState } from 'react';
 import CustomText from '../components/CustomText';
 import CustomInput from '../components/CustomInput';
@@ -53,7 +53,7 @@ const GenerateScreen = () => {
       />
 
       {/*  Level Dropdown */}
-      <CustomText text="Level" className="mt-10" />
+      <CustomText text="Level" className="mt-14" />
       <TouchableOpacity
         className="w-[90%] h-16 border-2 border-darkBlue rounded-3xl justify-center px-3 mt-2.5 bg-blue-50"
         onPress={() => setDropdownOpen(!dropdownOpen)}
@@ -80,7 +80,7 @@ const GenerateScreen = () => {
       )}
 
       {/*  Difficulty Multi-Select */}
-      <CustomText text="Difficulty" className="mt-10" />
+      <CustomText text="Difficulty" className="mt-14" />
       <CustomSelect
         options={['Easy', 'Medium', 'Hard']}
         multiSelect={true}
@@ -88,7 +88,7 @@ const GenerateScreen = () => {
       />
 
       {/*  Question Types Multi-Select */}
-      <CustomText text="Question types" className="mt-10" />
+      <CustomText text="Question types" className="mt-14" />
       <CustomSelect
         options={['MCQ', 'True/False', 'Short answer']}
         multiSelect={true}
