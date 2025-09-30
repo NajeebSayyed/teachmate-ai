@@ -62,7 +62,7 @@ const OutputScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'mintCream',
+    backgroundColor: '#E7F2EF',
     padding: 20,
   },
   title: {

@@ -4,7 +4,7 @@ import React from 'react';
 const CustomText = ({ text, textStyle, className }) => {
   return (
     <Text
-      className={`px-2 p mt-5 rounded-full text-center self-start ml-6  ${
+      className={`px-2 p mt-10 rounded-full text-center self-start ml-6  ${
         className || ''
       }`}
       style={[
