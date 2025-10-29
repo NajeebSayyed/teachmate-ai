@@ -1,3 +1,4 @@
+![Screenshot_2025-10-29-22-02-07-087_com miui mediaviewer](https://github.com/user-attachments/assets/6ac57ba2-18ad-472e-8ac8-64ce25ac3843)
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
